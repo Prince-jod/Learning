@@ -9,8 +9,7 @@ app.get('/',(req,res)=>{
 app.get('/about/:id',(req,res)=>{
   console.log(req.params);
   res.send(`About page with id: ${req.params.id}`);
-
-})
+});
 app.listen(port,()=>{
     console.log(`Server is running on http://localhost:${port}`);
 });
