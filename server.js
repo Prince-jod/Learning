@@ -6,7 +6,7 @@ app.get('/',(req,res)=>{
   console.log('Received a GET request at /');
     res.send('Hello World');
 });
-app.get('/about/10',(req,res)=>{
+app.get('/about/:id',(req,res)=>{
   console.log(req.params);
   res.send(`About page with id: ${req.params.id}`);
 
