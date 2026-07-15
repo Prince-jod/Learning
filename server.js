@@ -6,11 +6,11 @@ app.get('/',(req,res)=>{
   console.log('Received a GET request at /');
     res.send('Hello World');
 });
-app.post('/post',(req,res)=>{
-  console.log('Received a POST request at /post');
-    res.send('POST request received');
-});
+app.get('/about:id',(req,res)=>{
+  console.log(req.params);
+  res.send(`About page with id: ${req.params.id}`);
 
+})
 app.listen(port,()=>{
     console.log(`Server is running on http://localhost:${port}`);
 });
